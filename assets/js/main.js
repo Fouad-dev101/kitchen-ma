@@ -14,15 +14,16 @@ s+=`<rect y="100" width="400" height="64" fill="${t}" opacity=".3"/><rect y="164
 for(let k=0;k<6;k++){const x=12+k*64;s+=`<rect x="${x}" y="174" width="60" height="58" fill="${l}"/><rect x="${x+18}" y="182" width="24" height="2.4" rx="1" fill="${a}"/>`}
 if(I){s+=`<rect x="60" y="208" width="280" height="10" fill="${t}"/><rect x="70" y="218" width="260" height="62" fill="${l}"/><rect x="70" y="218" width="260" height="62" fill="#000" opacity=".1"/>`;(V?[110,200,290]:[100,300]).forEach(x=>s+=`<path d="M${x} 100V140" stroke="#333" stroke-width="1.5"/><path d="M${x-12} 152a12 12 0 0 1 24 0z" fill="${a}"/><circle cx="${x}" cy="154" r="24" fill="${a}" opacity=".25"/>`);for(let k=0;k<3;k++)s+=`<rect x="${100+k*80}" y="228" width="30" height="2.4" rx="1" fill="${a}"/>`}
 return s+'</svg>'}
+function P(n,i,alt){return K(i)+`<img class="ks" src="assets/img/${n}.jpg" alt="${alt||''}" ${n=='hero'?'':'loading="lazy"'} onload="this.previousElementSibling.remove()" onerror="this.remove()">`}
 const L={
 services:()=>SV.map(s=>`<div class="card rv"><div class="ic"><svg viewBox="0 0 24 24">${IC[s[0]]}</svg></div><h3>${s[1]}</h3><p>${s[2]}</p></div>`).join(''),
 steps:()=>ST.map(s=>`<div class="card rv"><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join(''),
-work:n=>WK.slice(0,n).map((w,i)=>`<div class="t rv" style="background:linear-gradient(140deg,hsl(${170-i*9} 45% ${16+i%3*5}%),hsl(${38+i*5} 50% ${30+i%4*5}%))">${K(i)}<div><b>${w[0]}</b><span>${w[1]} · illustration conceptuelle</span></div></div>`).join(''),
+work:n=>WK.slice(0,n).map((w,i)=>`<div class="t rv" style="background:linear-gradient(140deg,hsl(${170-i*9} 45% ${16+i%3*5}%),hsl(${38+i*5} 50% ${30+i%4*5}%))">${P('work-'+(i+1),i,w[0])}<div><b>${w[0]}</b><span>${w[1]}</span></div></div>`).join(''),
 reviews:()=>RV.map(r=>`<div class="rev rv"><div class="stars">★★★★★</div><p>« ${r[1]} »</p><small>${r[0]} · ${r[2]} · Avis Google</small></div>`).join(''),
 info:()=>INFO};
 $$('[data-list]').forEach(e=>e.innerHTML=L[e.dataset.list](+e.dataset.n||0));
-$('#home').insertAdjacentHTML('afterbegin',K(2));
-$$('.pic').forEach((p,j)=>p.insertAdjacentHTML('afterbegin',K(j?5:4)));
+$('#home').insertAdjacentHTML('afterbegin',P('hero',2));
+$$('.pic').forEach((p,j)=>p.insertAdjacentHTML('afterbegin',P(j?'contact':'about',j?5:4,j?'Showroom Kitchen.ma':'Équipe Kitchen.ma')));
 const sel=(n,a)=>`<select name="${n}" required><option value="" disabled selected>${a[0]}</option>${a.slice(1).map(o=>`<option>${o}</option>`).join('')}</select>`;
 $$('[data-form]').forEach(e=>{e.innerHTML=`<form class="frm ${e.hasAttribute('data-big')?'big':''}"><h3>${e.dataset.form}</h3><p>Réponse rapide et sans engagement.</p>
 <label><input name="nom" placeholder="Nom complet" required autocomplete="name"></label>

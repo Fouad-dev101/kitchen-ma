@@ -5,7 +5,7 @@ Built with plain HTML, CSS and JavaScript: no framework, no build step.
 
 > **Status:** demo / pitch build. Not affiliated with Kitchen.ma. Visuals are generated placeholder illustrations to be replaced with real project photos.
 
-**Live demo:** https://Fouad-Dev101.github.io/kitchen-ma/
+**Live demo:** https://YOUR-USERNAME.github.io/kitchen-ma/
 
 ## Features
 
@@ -54,6 +54,19 @@ python3 -m http.server 8000
 | Services, process, projects, reviews | `SV`, `ST`, `WK`, `RV` arrays in `assets/js/main.js` |
 | Colours | CSS variables at the top of `assets/css/style.css` |
 | Real photos | replace `K(i)` calls with `<img>` tags (use `loading="lazy"`) |
+
+## Add real photos
+
+Drop JPG files in `assets/img/` with these exact names. Missing files fall back to the generated illustration.
+
+| File | Used for | Suggested size |
+| --- | --- | --- |
+| `hero.jpg` | hero background | 1920×1080 |
+| `about.jpg` | "Why us" section | 1200×1500 |
+| `contact.jpg` | contact section | 1400×900 |
+| `work-1.jpg` … `work-9.jpg` | portfolio grid | 1400×1050 |
+
+Keep each file under ~300 KB (compress with squoosh.app).
 
 ## Tech
 
