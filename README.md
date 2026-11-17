@@ -5,7 +5,7 @@ Built with plain HTML, CSS and JavaScript: no framework, no build step.
 
 > **Status:** demo / pitch build. Not affiliated with Kitchen.ma. Visuals are generated placeholder illustrations to be replaced with real project photos.
 
-**Live demo:** https://YOUR-USERNAME.github.io/kitchen-ma/
+**Live demo:** https://Fouad-Dev101.github.io/kitchen-ma/
 
 ## Features
 
