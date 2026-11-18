@@ -3,7 +3,7 @@
 A fast, responsive, French-language website concept for **Kitchen.ma**, a custom-kitchen maker (cuisiniste) in Casablanca, Morocco.
 Built with plain HTML, CSS and JavaScript: no framework, no build step.
 
-> **Status:** demo / pitch build. Not affiliated with Kitchen.ma. Visuals are generated placeholder illustrations to be replaced with real project photos.
+> **Status:** demo / pitch build. Not affiliated with Kitchen.ma. Photos and logo are Kitchen.ma's own and are used for this concept only; remove on request.
 
 **Live demo:** https://YOUR-USERNAME.github.io/kitchen-ma/
 
@@ -61,6 +61,7 @@ Drop JPG files in `assets/img/` with these exact names. Missing files fall back 
 
 | File | Used for | Suggested size |
 | --- | --- | --- |
+| `logo.png` | header, footer, favicon | 256×256 |
 | `hero.jpg` | hero background | 1920×1080 |
 | `about.jpg` | "Why us" section | 1200×1500 |
 | `contact.jpg` | contact section | 1400×900 |
